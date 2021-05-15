@@ -1,0 +1,17 @@
+<nav>
+  <a href="/movies">Back</a>
+</nav>
+
+<h2>{{movie.title}}</h2>
+<p>Genre: {{movie.genre}}</p>
+<p>Plot: {{movie.plot}}</p>
+<p>Cast: 
+    <ul>
+    {{#each movie.cast}}
+       <li>{{name}}</li>
+    {{/each}}
+    </ul>
+</p>
+<form action="/movies/{{movie.id}}/delete" method="POST">
+    <button>Delete</button>
+</form>
